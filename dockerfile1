@@ -1,0 +1,16 @@
+
+FROM dockerfile/ubuntu
+
+
+RUN \
+  add-apt-repository -y ppa:nginx/stable && \
+  apt-get update && \
+  apt-get install -y nginx && 
+
+WORKDIR /etc/nginx
+
+CMD ["nginx"]
+
+
+EXPOSE 80
+EXPOSE 443
