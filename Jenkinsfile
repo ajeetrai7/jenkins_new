@@ -1,10 +1,8 @@
 pipeline {
 	  agent{
    		docker {
-			 image 'node:7-alpine'
-                        
-
-			}
+			 image 'ubuntu:latest'
+        		}
 	       }
     stages {
         stage('Build') {
