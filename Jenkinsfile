@@ -1,7 +1,8 @@
 pipeline {
 	  agent{
    		docker {
-			 sudo image 'node:7-alpine'
+			 image 'node:7-alpine'
+                         
 			}
 	       }
     stages {
