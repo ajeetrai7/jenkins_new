@@ -3,7 +3,7 @@ pipeline {
     		stages {
         	stage('test') {
             steps {
-		set -ex
+	    sh	set -ex
                 echo "Hello-World"
 		}
 	}
