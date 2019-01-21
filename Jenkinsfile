@@ -1,8 +1,8 @@
 pipeline {
 	  agent{
    	docker {
-			image 'node:7-alpine'
-			args '-u root:sudo'
+			image 'centos:latest'
+			args '-u root:sudo -v /home/ajeet/Desktop/docker/Dockerfile'
 			}
 	       }
     stages {
