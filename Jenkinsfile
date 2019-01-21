@@ -1,8 +1,7 @@
 pipeline {
 	  agent{
-   	docker {
-			image 'centos:latest'
-			args '-u root:sudo '
+   		docker {
+			image 'node:7-alpine'
 			}
 	       }
     stages {
