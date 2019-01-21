@@ -2,7 +2,7 @@ pipeline {
 	  agent{
    	docker {
 			image 'node:7-alpine'
-			args '-u root:root'
+			args '-u root:sudo'
 			}
 	       }
     stages {
