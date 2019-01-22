@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Hello World"'
-		sh ' sudo apt-get update'
+		sh '  apt-get update'
             	sh ' /bin/bash  hello.sh'
                 sh '''
                     echo "Multiline shell steps works too"
