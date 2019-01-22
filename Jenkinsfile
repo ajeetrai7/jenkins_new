@@ -9,8 +9,8 @@ pipeline {
             steps {
                 sh 'echo "Hello World"'
 
-		sh 'apt-get update'
-                sh ' docker run -t -d -u 123:132 -w /var/lib/jenkins/workspace/jenkins-new1_master -v /var/lib/jenkins/workspace/jenkins-new1_master:/var/lib/jenkins/workspace/jenkins-new1_master:rw,z -v /var/lib/jenkins/workspace/jenkins-new1_master@tmp:/var/lib/jenkins/workspace/jenkins-new1_master@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** ubuntu:latest cat '
+		sh ' sudo apt-get update'
+                sh ' sudo docker run -t -d -u 123:132 -w /var/lib/jenkins/workspace/jenkins-new1_master -v /var/lib/jenkins/workspace/jenkins-new1_master:/var/lib/jenkins/workspace/jenkins-new1_master:rw,z -v /var/lib/jenkins/workspace/jenkins-new1_master@tmp:/var/lib/jenkins/workspace/jenkins-new1_master@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** ubuntu:latest cat '
 
 		sh ' /bin/bash  hello.sh'
                 sh '''
