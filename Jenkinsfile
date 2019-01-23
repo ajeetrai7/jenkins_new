@@ -2,7 +2,7 @@ node {
   repositoryAccess = 'https://github.com/AJEETRAI707/jenkins-demo'
 //  repositoryAccessSeparator = '/'
   
-  echo "repository host: ${127.0.0.1:8080}" // github.com
+  echo "repository host: ${repositoryhost}" // github.com
   echo "repository path: ${AJEETRAI707/jenkins-demo.git}" // <user>/<repository>.git
   echo "repository jenkins credentials id: ${ajeet}"  // jenkins credentials for the jenkins git account who have commit access
   echo "repository branch: ${master}" // master or another branch
