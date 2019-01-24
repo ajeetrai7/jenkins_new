@@ -26,6 +26,6 @@ node {
     sh("git config user.email ${ajeetrai707@gmail.com}")
     sh("git config user.name '${ajeetrai707}'")
     sh("git tag -a ${env.v1.2} -m '${i have commited now}'")
-    sh("git push ${repositoryAccess}${env.ajeetrai707}:${env.passwd}@${https://github.com/AJEETRAI707/jenkins-demo} --tags")
+    sh("git push ${repositoryAccess}${env.ajeetrai707}:${env.password}@${https://github.com/AJEETRAI707/jenkins-demo} --tags")
   }
 }
