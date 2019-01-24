@@ -1,17 +1,14 @@
 pipeline {
-	  agent{
-    		docker {
-        			 image 'ubuntu:latest'
-                       }
-	       }
+	  agent any
+	       
    stages {
          stage('Build') {
              steps {
  		sh 'set -ex'
-                 sh  'echo "Hello World"'
+                s  'echo "Hello World"'
   		sh  '  lsblk '
                	sh ' /bin/bash  hello.sh'
-                 sh '''
+                sh '''
                     echo "Multiline shell steps works too"
                      ls -lah
                 '''
