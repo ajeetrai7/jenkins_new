@@ -4,7 +4,7 @@ pipeline {
         			 image 'ubuntu:latest'
                        }
 	       }
-    stages {
+   stages {
          stage('Build') {
              steps {
  		sh 'set -ex'
