@@ -21,11 +21,11 @@ node {
   withCredentials([[$class: 'UsernamePasswordMultiBinding', 
                   credentialsId: credentialsId, 
                   usernameVariable: 'ajeetrai707', 
-                  passwordVariable: 'Silencer@1234']]) {
+                  passwordVariable: 'passwd']]) {
 
     sh("git config user.email ${ajeetrai707@gmail.com}")
     sh("git config user.name '${ajeetrai707}'")
     sh("git tag -a ${env.v1.2} -m '${i have commited now}'")
-    sh("git push ${repositoryAccess}${env.ajeetrai707}:${env.Silencer@1234}@${https://github.com/AJEETRAI707/jenkins-demo} --tags")
+    sh("git push ${repositoryAccess}${env.ajeetrai707}:${env.passwd}@${https://github.com/AJEETRAI707/jenkins-demo} --tags")
   }
 }
