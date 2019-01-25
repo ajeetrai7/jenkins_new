@@ -4,8 +4,8 @@ pipeline {
         stage('Example') {
             steps {
 		
-                echo "Hello- World "
-               sh 'lsblk'
+                 echo "Hello- World "
+                sh 'lsblk'
                sh 'date'
             
                sh 'ls -alh'
