@@ -4,7 +4,9 @@ pipeline {
         stage('Example') {
             steps {
 		
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                echo "Hello- World "
+               sh 'lsblk'
+               sh 'la -alh'
             }
          }
      }
