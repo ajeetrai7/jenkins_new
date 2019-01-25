@@ -8,7 +8,7 @@ pipeline {
                sh 'lsblk'
                sh 'date'
                sh 'ls -alh'
-            }
-         }
-     }
+             }
+          }
+      }
 }
