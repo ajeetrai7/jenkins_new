@@ -6,7 +6,7 @@ pipeline {
 		
                 echo "Hello- World "
                sh 'lsblk'
-               sh 'la -alh'
+               sh 'ls -alh'
             }
          }
      }
