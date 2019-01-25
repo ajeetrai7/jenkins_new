@@ -7,6 +7,7 @@ pipeline {
                 echo "Hello- World "
                sh 'lsblk'
                sh 'date'
+            
                sh 'ls -alh'
              }
           }
