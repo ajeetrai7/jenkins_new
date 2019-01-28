@@ -7,7 +7,7 @@ pipeline {
                  echo "Hello- World "
                 sh 'lsblk'
                sh 'date'
-               sh 'sudo ls -l /etc/hosts'
+               sh 'sudo ls -l /etc/'
                sh 'ls -alh'
              }
           }
