@@ -10,6 +10,11 @@ pipeline {
                sh 'sudo ls -l /etc/'
                sh 'ls -alh'
              }
-          }
+         }
+	stage('Example') {
+            steps {
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+            }
+        }
       }
 }
