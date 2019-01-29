@@ -24,7 +24,7 @@ pipeline {
 
                
              sh '$passphraseVariable'
-}
+
        		sh 'printenv'
                echo "Hello- World "
                sh 'lsblk'
