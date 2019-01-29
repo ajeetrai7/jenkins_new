@@ -1,6 +1,6 @@
 pipeline {
     agent any
-/*	environment {
+	environment {
 
 	 // Using returnStdout
         	CC = """${sh(
@@ -11,11 +11,13 @@ pipeline {
         	EXIT_STATUS = """${sh(
                 	returnStatus: true,
                		 script: 'exit 1'
-  */         		 )}"""
+           		 )}"""
+		}
      stages {
         stage('Example') { 
 		environment{
 			DEBUG_FLAGS = '-g'
+			}
 			}
 
              steps {
