@@ -18,7 +18,7 @@ pipeline {
 			DEBUG_FLAGS = '-g'
 			}
 
-            steps {
+             steps {
 			 withCredentials([sshUserPrivateKey(credentialsId: '54fb8821-b248-4aa9-a5cc-969e71319814', keyFileVariable: 'username', passphraseVariable: '', usernameVariable: 'ajeet')]) {
     // some block
 
