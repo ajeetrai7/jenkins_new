@@ -21,9 +21,12 @@ pipeline {
 			}
 
             steps {
-		sh 'printenv'
-                 echo "Hello- World "
-                sh 'lsblk'
+			 withCredentials([sshUserPrivateKey(credentialsId: '54fb8821-b248-4aa9-a5cc-969e71319814', keyFileVariable: 'username', passphraseVariable: '', usernameVariable: 'ajeet')]) {
+    // some block
+}
+       		sh 'printenv'
+               echo "Hello- World "
+               sh 'lsblk'
                sh 'date'
                sh 'sudo ls -l /etc/'
                sh 'ls -alh'
