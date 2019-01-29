@@ -1,5 +1,9 @@
 pipeline {
     agent any
+
+  parameters {
+        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+    }
 	environment {
 
 	 // Using returnStdout
@@ -12,10 +16,6 @@ pipeline {
                 	returnStatus: true,
                		 script: 'exit 1'
            		 )}"""
-
- parameters {
-        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
-		}
      stages {
         stage('Example') { 
 		environment{
