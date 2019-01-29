@@ -13,6 +13,8 @@ pipeline {
                		 script: 'exit 1'
            		 )}"""
 
+ parameters {
+        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
 		}
      stages {
         stage('Example') { 
@@ -24,6 +26,7 @@ pipeline {
 			 withCredentials([sshUserPrivateKey(credentialsId: '54fb8821-b248-4aa9-a5cc-969e71319814', keyFileVariable: 'username', passphraseVariable: '', usernameVariable: 'ajeet')]) {
     // some block
 
+                echo "${params.Greeting} World!"
              sh '$passphraseVariable'
 }
        		sh 'printenv'
