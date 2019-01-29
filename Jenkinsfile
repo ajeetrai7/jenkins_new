@@ -40,3 +40,13 @@ pipeline {
         }
       }
 }
+
+ post {
+        always {
+            junit '**/target/*.xml'
+        }
+        failure {
+            mail to: ajeetrai707@gmail.com, subject: 'The Pipeline failed :('
+        }
+    }
+}
