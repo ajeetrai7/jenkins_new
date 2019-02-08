@@ -2,12 +2,11 @@ pipeline {
     agent {
         docker { image 'node:7-alpine' }
 
-    environment {
- #       USER_CREDENTIALS = credentials('USER_PASSWORD')
+     environment {
+ 
 
-
-withCredentials([usernamePassword(credentialsId: 'jenkins_credentials', usernameVariable: 'username', passwordVariable: 'password')])
-    }
+  withCredentials([usernamePassword(credentialsId: 'jenkins_credentials', usernameVariable: 'username', passwordVariable: 'password')])
+     }
 
     stages {
         stage('Run') {
@@ -18,6 +17,7 @@ withCredentials([usernamePassword(credentialsId: 'jenkins_credentials', username
    withCredentials([usernamePassword(credentialsId: 'docker_login', usernameVariable: 'username1', passwordVariable: 'password1')])
 
     }
+		sh 'set -x'
 
 		docker.withRegistry('', 'docker-hub-credentials') {
 		sh "docker login -u ${username1} -p ${password1}"
