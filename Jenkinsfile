@@ -1,6 +1,7 @@
 pipeline {
     agent {
-        docker { image 'node:7-alpine' }
+        docker { image 'ubuntu' }
+	}
 
     environment {
  #       USER_CREDENTIALS = credentials('USER_PASSWORD')
