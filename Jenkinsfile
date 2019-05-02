@@ -3,13 +3,13 @@ pipeline {
         docker { image 'ubuntu' }
 	}
 
-        environment {
-         withCredentials([usernamePassword(credentialsId: 'e9d8459c-a4d8-4325-8b04-266075ab3a4b', usernameVariable: 'username', passwordVariable: 'password')])
+     environment {
+         withCredentials([usernamePassword(credentialsId: 'e9d8459c-a4d8-4325-8b04-266075ab3a4b', usernameVariable: 'Username', passwordVariable: 'Password')])
      }
 
     stages {
         stage('Run') {
-            steps {
+        steps {
 		
 // 		 environment {
 
