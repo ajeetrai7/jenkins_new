@@ -1,11 +1,5 @@
 pipeline {
-    agent {
-<<<<<<< HEAD
-        docker { image 'node:7-alpine' }
-=======
-        docker { image 'ubuntu' }
->>>>>>> dddd99d575ce26077428c61aaafba1574ba9e3e7
-	}
+    agent any
 
      environment {
  
