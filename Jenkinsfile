@@ -23,17 +23,17 @@ pipeline {
         echo 'Password is ${password}'
 
 
-		docker.withRegistry('', 'docker-hub-credentials') {
-		sh "docker login -u ${username1} -p ${password1}"
-		myImage.push("${env.BUILD_NUMBER}")
-		myImage.push("latest")		
+		// docker.withRegistry('', 'docker-hub-credentials') {
+		// sh "docker login -u ${username1} -p ${password1}"
+		// myImage.push("${env.BUILD_NUMBER}")
+		// myImage.push("latest")		
 
-		sh 'docker --version'
+	//	sh 'docker --version'
 
                 sh "echo $username"
                 sh "echo $password"
             }
         }
     }
-}
+  }
 }
