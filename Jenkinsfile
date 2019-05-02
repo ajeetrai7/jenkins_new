@@ -3,22 +3,25 @@ pipeline {
         docker { image 'ubuntu' }
 	}
 
-     environment {
- 
-
-  withCredentials([usernamePassword(credentialsId: 'jenkins_credentials', usernameVariable: 'username', passwordVariable: 'password')])
+        environment {
+         withCredentials([usernamePassword(credentialsId: 'e9d8459c-a4d8-4325-8b04-266075ab3a4b', usernameVariable: 'username', passwordVariable: 'password')])
      }
 
     stages {
         stage('Run') {
             steps {
 		
-		 environment {
+// 		 environment {
 
-   withCredentials([usernamePassword(credentialsId: 'docker_login', usernameVariable: 'username1', passwordVariable: 'password1')])
+//    withCredentials([usernamePassword(credentialsId: 'docker_login', usernameVariable: 'username1', passwordVariable: 'password1')])
 
-    }
-		sh 'set -x'
+//     }
+// 		
+        sh 'set -x'
+        echo "Hello !!"
+        echo 'username is ${username}'
+        echo 'Password is ${password}'
+
 
 		docker.withRegistry('', 'docker-hub-credentials') {
 		sh "docker login -u ${username1} -p ${password1}"
