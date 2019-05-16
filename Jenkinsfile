@@ -21,10 +21,12 @@ pipeline {
         echo "Hello !!"
         echo 'username is ${username}'
         echo 'Password is ${password}'
+        sh 'git status'\
+        
 
 
 		// docker.withRegistry('', 'docker-hub-credentials') {
-		// sh "docker login -u ${username1} -p ${password1}"
+	     sh "docker login -u ${username1} -p ${password1}"
 		// myImage.push("${env.BUILD_NUMBER}")
 		// myImage.push("latest")		
 
