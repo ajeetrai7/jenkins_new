@@ -27,6 +27,7 @@ pipeline {
 
 		// docker.withRegistry('', 'docker-hub-credentials') {
 	     sh "docker login -u ${username1} -p ${password1}"
+         sh "lsblk"
 		// myImage.push("${env.BUILD_NUMBER}")
 		// myImage.push("latest")		
 
