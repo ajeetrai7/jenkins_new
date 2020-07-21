@@ -1,2 +1,2 @@
 # jenkins_new
-This repo is a of sample jenkinsfile
+This repo is sample of jenkinsfile
